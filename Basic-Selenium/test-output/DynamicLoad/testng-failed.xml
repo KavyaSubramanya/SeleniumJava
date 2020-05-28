@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DynamicLoad]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="DynamicLoading(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.DynamicLoading">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="dynamicLoad"/>
+          <include name="intializeDriver"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.DynamicLoading -->
+    </classes>
+  </test> <!-- DynamicLoading(failed) -->
+</suite> <!-- Failed suite [DynamicLoad] -->

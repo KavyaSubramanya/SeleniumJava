@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LoginTest" verbose="1" parallel="tests" thread-count="3" >
+  <test name="PositiveTest" >
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="name" value="tomsmith"/>
+  <parameter name="password" value="SuperSecretPassword!"/>
+  <parameter name="message" value="You logged into a secure area!"/>
+    <classes>
+       <class name="com.herokuapp.theinternet.LoginTest">
+       <methods>
+        <include name="loginFunction" />
+      </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="WrongUsername" >
+  <parameter name="browser" value="Firefox"/>
+  <parameter name="name" value="test"/>
+  <parameter name="password" value="SuperSecretPassword!"/>
+  <parameter name="message" value="Your username is invalid!"/>
+    <classes>
+       <class name="com.herokuapp.theinternet.LoginTest">
+       <methods>
+        <include name="loginFunction" />
+      </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="WrongPassword" >
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="name" value="tomsmith"/>
+  <parameter name="password" value="test"/>
+  <parameter name="message" value="Your password is invalid!"/>
+    <classes>
+       <class name="com.herokuapp.theinternet.LoginTest">
+       <methods>
+        <include name="loginFunction" />
+      </methods>
+      </class>
+    </classes>
+  </test>  
+</suite>
